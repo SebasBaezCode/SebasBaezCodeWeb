@@ -4,5 +4,5 @@
   RewriteRule ^portafolio/index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . portafolio//index.html [L]
+  RewriteRule . portafolio/index.html [L]
 </IfModule>
