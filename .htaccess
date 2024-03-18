@@ -5,6 +5,9 @@
     # Redirigir todas las solicitudes a la raíz
     RewriteRule ^(.*)$ / [R=301,L]
     
+    # Redirigir solicitudes de /portafolio a la raíz
+    RewriteRule ^portafolio/(.*)$ / [R=301,L]
+
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule . /index.html [L]
