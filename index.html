@@ -1,1 +1,147 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width,initial-scale=1" name="viewport"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-150752523-1"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'UA-150752523-1');</script><link href="/portafolio/favicon.ico" rel="icon"><meta content="Sebastian Báez - Desarrollador web - Bucaramanga - Sitios webs, landing pages, volantes digitales." name="description"><title>Sebastian Báez - Desarrollador Web</title><link href="/portafolio/css/chunk-11e78905.dfca00be.css" rel="prefetch"><link href="/portafolio/css/chunk-73e23697.8ad138c4.css" rel="prefetch"><link href="/portafolio/css/chunk-e12c0e50.17971138.css" rel="prefetch"><link href="/portafolio/js/chunk-11e78905.04574712.js" rel="prefetch"><link href="/portafolio/js/chunk-73e23697.8fa3e683.js" rel="prefetch"><link href="/portafolio/js/chunk-e12c0e50.80eb1a44.js" rel="prefetch"><link href="/portafolio/css/app.418dafa2.css" rel="preload" as="style"><link href="/portafolio/css/chunk-vendors.d611faa8.css" rel="preload" as="style"><link href="/portafolio/js/app.647d7335.js" rel="preload" as="script"><link href="/portafolio/js/chunk-vendors.96364b93.js" rel="preload" as="script"><link href="/portafolio/css/chunk-vendors.d611faa8.css" rel="stylesheet"><link href="/portafolio/css/app.418dafa2.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but sebas-baez-code doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/portafolio/js/chunk-vendors.96364b93.js"></script><script src="/portafolio/js/app.647d7335.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SebasBaezCode 2.0 - Sebastian Báez - Web Developer</title>
+    <meta
+      name="description"
+      content="Sebastian Baez - sebasbaezcode Web developer, Desarrollador web, next, react, jest, php"
+    />
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: black;
+        text-align: center;
+        padding: 20px;
+        font: 20px Helvetica, sans-serif;
+        color: #efe8e8;
+        font-family: 'Fira Code', monospace;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-top: 150px;
+        }
+      }
+      h1 {
+        font-size: 50px;
+      }
+      article {
+        display: block;
+        text-align: left;
+        max-width: 650px;
+        margin: 0 auto;
+      }
+      a {
+        color: #dc8100;
+        text-decoration: none;
+        transition: color 0.5s;
+      }
+      .title {
+        color: #dc8100;
+      }
+      .title-mobile {
+        padding: 5px;
+        font-size: 58px;
+        position: relative;
+      }
+      .title-desktop {
+        display: none;
+      }
+
+      @media (min-width: 1025px) {
+        .title-mobile {
+          display: none;
+        }
+        .title-desktop {
+          display: block;
+        }
+      }
+
+      .tag {
+        color: #dc8100;
+        position: absolute;
+        bottom: 0;
+        font-size: 55px;
+      }
+      a:hover {
+        color: #efe8e8;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body bgcolor="2e2929">
+    <article>
+      <h1 style="line-height: 120%" class="title-desktop">
+        <span class="title">SebasBaezCode 2.0 </span><br />is on the Horizon!
+      </h1>
+      <h1 style="line-height: 120%" class="title-mobile">
+        <span>Sebas</span> <br />
+        &nbsp;&nbsp;&nbsp;<span>Bae<span>z</span></span> <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Code</span> <br />
+        <span class="tag">2.0</span>
+      </h1>
+      <div>
+        <p>
+          I'll be back soon! Sorry for the inconvenience, but I'm currently
+          working on an exciting site renovation. SebasBaezCode 2.0 is on its
+          way with some exciting upgrades! If you need anything, don't hesitate
+          to
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/sebastian-b%C3%A1ez-a461a2176/"
+            rel="noreferrer"
+            title="LinkedIn"
+            >contact me</a
+          >; otherwise, I'll be back online shortly.
+        </p>
+        <br />
+        <p>&mdash; SebasBaezCode</p>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        "
+      >
+        <p class="day"></p>
+        <p class="hour"></p>
+        <p class="minute"></p>
+        <p class="second"></p>
+      </div>
+    </article>
+    <script>
+      const countDown = () => {
+        const countDay = new Date('June 25, 2024 00:00:00');
+        const now = new Date();
+        const counter = countDay - now;
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+
+        const textDay = Math.floor(counter / day);
+        const textHour = Math.floor((counter % day) / hour);
+        const textMinute = Math.floor((counter % hour) / minute);
+        const textSecond = Math.floor((counter % minute) / second);
+
+        document.querySelector('.day').innerText = textDay + ' D';
+        document.querySelector('.hour').innerText = textHour + ' H';
+        document.querySelector('.minute').innerText = textMinute + ' M';
+        document.querySelector('.second').innerText = textSecond + ' S';
+      };
+      setInterval(countDown, 1000);
+    </script>
+  </body>
+</html>
