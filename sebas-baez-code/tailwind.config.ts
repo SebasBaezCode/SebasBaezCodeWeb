@@ -15,7 +15,8 @@ const config: Config = {
       },
       darkMode: 'class',
       colors: {
-        'sb-mainBg': '#000000'
+        'sb-mainBg': '#000000',
+        'sb-mainGrey': '#3e3e3e'
       }
     }
   },
