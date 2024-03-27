@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sb-container {
+  width: 95%;
+  margin: auto;
+  max-width: 800px;
+  border: 1px solid gray;
+
+  @media (min-width: 1025px) {
+    width: 90%;
+    max-width: 1300px;
+  }
+}
